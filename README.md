@@ -4,7 +4,7 @@ Kanban app using Next.js / Zustand / react-beautiful-dnd
 
 ## Demo
 
-Hosted demo: [Trollo](#)
+Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 
 ## Features
 
