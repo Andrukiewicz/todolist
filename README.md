@@ -1,4 +1,4 @@
-## Trollo
+## Description
 
 Kanban app using Next.js / Zustand / react-beautiful-dnd
 
