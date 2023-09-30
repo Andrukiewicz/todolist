@@ -14,8 +14,8 @@ Hosted demo: [Trollo](#)
 
 ## Things to add / fix
 
-- Text truncate
-- Max text length
+- Text truncate ✔
+- Max text length ✔
 - Modal window with ability to add task description
 - Due date set / check / visualize
 - Markdown implementation
