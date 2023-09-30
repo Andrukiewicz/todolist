@@ -124,9 +124,9 @@ export default function Column({ state, index }) {
             <div
               ref={provided.innerRef}
               {...provided.draggableProps}
-              className={`${state.collapsed ? "w-[3rem]" : "w-[16rem]"} ${
-                snapshot.isDragging ? "scale-110" : "scale-100"
-              } inline-block min-w-64 text-center scroll-m-2 align-top whitespace-nowrap mx-2 rounded-lg h-fit bg-gray-50 dark:bg-gray-950`}
+              className={`${
+                state.collapsed ? "w-[3rem]" : "w-[16rem]"
+              }  inline-block min-w-64 text-center scroll-m-2 align-top whitespace-nowrap mx-2 rounded-lg h-fit bg-gray-50 dark:bg-gray-950`}
             >
               <div
                 {...provided.dragHandleProps}
@@ -209,7 +209,7 @@ export default function Column({ state, index }) {
                         snapshot.isDraggingOver
                           ? "bg-gray-300 dark:bg-gray-600"
                           : ""
-                      } overflow-y-auto max-h-96 transition-colors p-2 rounded-lg`}
+                      } max-h-96 transition-colors p-2 rounded-lg`}
                     >
                       {tasks.map((task, index) => (
                         <div key={task.id}>

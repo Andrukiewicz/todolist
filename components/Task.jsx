@@ -15,8 +15,8 @@ export default function Task({ id, index }) {
   const showMenu = (e) => {
     e.preventDefault()
     setContext(true)
-    setXyPosistion({ x: e.pageX, y: e.pageY })
-    console.log(xYPosistion)
+    setXyPosistion({ x: e.pageX, y: e.pageY - 5 * 16 }) // Subtracting 4rem (16 pixels per rem)
+    console.log("Mouse Coordinates:", e.pageX, e.pageY)
   }
 
   const closeMenu = () => {
