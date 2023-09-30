@@ -2,8 +2,13 @@
 
 Kanban app using Next.js / Zustand / react-beautiful-dnd
 
-It's probably posted now on Github pages.
-If it is: link is here: [Trollo](#)
+```bash
+- Persisting tasks, columns, and collapsing column state in LocalStorage
+- Fully animated drag and drop in between tasks and columns
+- Fully rearrangable positions of tasks and columns
+```
+
+Hosted demo: [Trollo](#)
 
 ## Links to all my apps
 
