@@ -142,7 +142,9 @@ export default function Column({ state, index }) {
                   transition={{ ease: "easeOut", duration: 0.1 }}
                   animate={{ rotate: state.collapsed ? 90 : 0 }}
                   onClick={() => handleToggleCollapse(state.id)}
-                  className='flex items-center justify-center h-8 w-8 p-2 top-0 left-0 rounded-full bg-white text-gray-950'
+                  className={`${
+                    state.collapsed ? "rotate-90" : "rotate-0"
+                  } flex items-center transition-all justify-center h-8 w-8 p-2 top-0 left-0 rounded-full bg-white text-gray-950`}
                 >
                   <ArrowRightIcon className='h-4 w-4' />
                 </button>
