@@ -17,6 +17,7 @@ Hosted demo: [Trollo](#)
 - Text truncate / Max text length
 - Modal window with ability to add task description
 - Due date set / check / visualize
+- Markdown implementation
 
 ## Links to all my apps
 
