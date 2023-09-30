@@ -69,7 +69,9 @@ export default function Task({ id, index }) {
               </button>
             </div>
           )}
-          <h2>{task.title}</h2>
+          <h2 className='break-words overflow-hidden h-full whitespace-pre-wrap'>
+            {task.title}
+          </h2>
         </div>
       )}
     </Draggable>

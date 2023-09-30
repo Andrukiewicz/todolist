@@ -116,6 +116,11 @@ export default function Column({ state, index }) {
     toggleColumnCollapse(id)
   }
 
+  const handleResize = (e) => {
+    e.target.style.height = "auto"
+    e.target.style.height = `${e.target.scrollHeight}px`
+  }
+
   return (
     <>
       {loaded ? (
@@ -223,15 +228,17 @@ export default function Column({ state, index }) {
                   )}
                 </Droppable>
                 {showInput ? (
-                  <div className='flex items-center w-full flex-row'>
-                    <input
+                  <div className='flex items-center w-full flex-row h-fit'>
+                    <textarea
                       id='newTask'
                       ref={inputRef}
                       type='text'
                       value={newTaskTitle}
                       onChange={(e) => setNewTaskTitle(e.target.value)}
                       onKeyDown={handleKeyDown}
-                      className='bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-lg flex-1'
+                      onInput={handleResize}
+                      className='bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-lg flex-1 break-words h-fit block overflow-hidden resize-y'
+                      maxLength={100}
                       placeholder='New task name...'
                       autoFocus
                     />
