@@ -19,6 +19,7 @@ Hosted demo: [Trollo](#)
 - Modal window with ability to add task description
 - Due date set / check / visualize
 - Markdown implementation
+- Mouse grab horizontal scroll
 
 ## Links to all my apps
 
