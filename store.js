@@ -54,23 +54,59 @@ const store = (set) => ({
   ) =>
     set(
       produce((store) => {
-        const newTaskIds = [...store.tasks] // Create a copy of task ids
-        const [movedTask] = newTaskIds.splice(sourceIndex, 1) // Remove task from source index
+        const newTaskIds = [...store.tasks]
 
-        // Create a new task object with updated state
-        const updatedTask = {
-          ...movedTask,
-          state: destinationDroppableId,
-          order: destinationIndex,
+        // Find the moved task
+        const movedTask = newTaskIds.find((task) => task.id === draggableId)
+
+        if (movedTask) {
+          const removedTaskFromArray = newTaskIds.filter(
+            (task) => task.id !== draggableId
+          )
+
+          // Find the tasks in the same column
+          const tasksWithDestinationId = removedTaskFromArray.filter(
+            (task) => task.state === destinationDroppableId
+          )
+
+          // Determine the new order for the moved task
+          let newOrder = destinationIndex
+
+          // Ensure the newOrder is within bounds
+          if (newOrder < 0) {
+            newOrder = 0
+          } else if (newOrder > tasksWithDestinationId.length) {
+            newOrder = tasksWithDestinationId.length
+          }
+
+          // Update the state and order of the moved task
+          movedTask.state = destinationDroppableId
+          movedTask.order = newOrder
+
+          // Insert the moved task at the desired index
+          tasksWithDestinationId.splice(newOrder, 0, movedTask)
+
+          // Update the order of the other tasks in the same column
+          tasksWithDestinationId.forEach((task, index) => {
+            task.order = index
+          })
+
+          // Remove tasks with the same destinationDroppableId from original task array
+          const tasksWithoutDestinationId = removedTaskFromArray.filter(
+            (task) => task.state !== destinationDroppableId
+          )
+
+          // Concatenate the filtered tasks and the tasks in the same column
+          store.tasks = [
+            ...tasksWithoutDestinationId,
+            ...tasksWithDestinationId,
+          ]
         }
-
-        newTaskIds.splice(destinationIndex, 0, updatedTask) // Insert task at destination index
-
-        store.tasks = newTaskIds // Update tasks in the store
       }),
       false,
       "Task moved"
     ),
+
   moveColumn: (
     sourceIndex,
     destinationIndex,
@@ -89,7 +125,7 @@ const store = (set) => ({
 
         newColumnIds.splice(destinationIndex, 0, updatedColumn) // Insert task at destination index
 
-        console.log(newColumnIds)
+        console.log(updatedColumn)
 
         store.columns = newColumnIds // Update tasks in the store
       }),
