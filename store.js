@@ -27,7 +27,38 @@ const store = (set) => ({
     },
     // Add more default columns as needed
   ],
-  tasks: [],
+  tasks: [
+    {
+      id: "e9ea77a6-4031-4429-9534-2709f7bc07c6",
+      order: 0,
+      state: "3",
+      title: "I'm hired? Oh thanks 😘",
+    },
+    {
+      id: "g4ea77a6-4031-4529-9535-2709f7dd07c6",
+      order: 0,
+      state: "1",
+      title: "Move tasks inside one list",
+    },
+    {
+      id: "g4ea77a6-4031-4529-9535-2709f7dd07c6",
+      order: 1,
+      state: "1",
+      title: "Move me!",
+    },
+    {
+      id: "3810e834-5aac-43b3-96da-9b5823dfcd72",
+      order: 0,
+      state: "2",
+      title: "Move tasks between lists",
+    },
+    {
+      id: "62b14093-7e8f-4c34-bfa1-db31476276d7",
+      order: 1,
+      state: "2",
+      title: "You can also change the order of lists",
+    },
+  ],
   addTask: (id, title, state) =>
     set(
       produce((store) => {
