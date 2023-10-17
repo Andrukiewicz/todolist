@@ -41,7 +41,7 @@ const store = (set) => ({
       title: "Move tasks inside one list",
     },
     {
-      id: "g4ea77a6-4031-4529-9535-2709f7dd07c6",
+      id: "6gss77a6-4031-4529-9535-6666f7ddbafs",
       order: 1,
       state: "1",
       title: "Move me!",
