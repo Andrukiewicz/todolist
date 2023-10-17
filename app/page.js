@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleAddColumn = () => {
     const newColumnID = uuidv4() // Generate a new unique ID for the column
-    const newColumnName = "New Column" // You can set an initial name if you'd like
+    const newColumnName = "Click to rename" // You can set an initial name if you'd like
     addColumn(newColumnID, newColumnName)
   }
 

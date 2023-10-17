@@ -162,7 +162,7 @@ export default function Column({ state, index }) {
                     onChange={handleNameChange}
                     onKeyDown={handleKeyDownColumn}
                     maxLength={15}
-                    className='w-full rounded-lg font-medium text-center'
+                    className='w-full rounded-lg font-medium text-center bg-gray-100 text-black dark:bg-gray-800 dark:text-white'
                     autoFocus
                   />
                 ) : (
