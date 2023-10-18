@@ -40,7 +40,6 @@ export default function Column({ state, index }) {
     if (e.key === "Enter") {
       setIsEditing(false)
       updateColumnName(state.id, columnName)
-      console.log(columnName + " new name front")
       useStore.persist.rehydrate()
     } else if (e.key === "Escape") {
       setIsEditing(false)

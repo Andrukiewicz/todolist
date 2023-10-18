@@ -33,37 +33,56 @@ const store = (set) => ({
       order: 0,
       state: "3",
       title: "I'm hired? Oh thanks 😘",
+      description: "1",
     },
     {
       id: "g4ea77a6-4031-4529-9535-2709f7dd07c6",
       order: 0,
       state: "1",
       title: "Move tasks inside one list",
+      description: "2",
     },
     {
       id: "6gss77a6-4031-4529-9535-6666f7ddbafs",
       order: 1,
       state: "1",
-      title: "Move me!",
+      title: "Move me up!",
+      description: "3",
+    },
+    {
+      id: "6gs553a6-4031-4529-9faf-6666f55fbafs",
+      order: 1,
+      state: "1",
+      title: "Right click to edit or delete!",
+      description: "3",
     },
     {
       id: "3810e834-5aac-43b3-96da-9b5823dfcd72",
       order: 0,
       state: "2",
       title: "Move tasks between lists",
+      description: "4",
     },
     {
       id: "62b14093-7e8f-4c34-bfa1-db31476276d7",
       order: 1,
       state: "2",
-      title: "You can also change the order of lists",
+      title: "Try to change the order of lists",
+      description: "5",
+    },
+    {
+      id: "62b535093-7e8f-4c34-hs7a1-db314jsj76d7",
+      order: 2,
+      state: "2",
+      title: "Click me to add description",
+      description: "5",
     },
   ],
   addTask: (id, title, state) =>
     set(
       produce((store) => {
         const order = store.tasks.length // Assign the order based on the current number of tasks
-        store.tasks.push({ id, title, state, order })
+        store.tasks.push({ id, title, state, order, description: "" })
       }),
       false,
       "Add Task"
@@ -75,6 +94,18 @@ const store = (set) => ({
       }),
       false,
       "Remove Task"
+    ),
+  updateTask: (id, title, description) =>
+    set(
+      produce((store) => {
+        const taskToUpdate = store.tasks.find((task) => task.id === id)
+        if (taskToUpdate) {
+          taskToUpdate.title = title
+          taskToUpdate.description = description
+        }
+      }),
+      false,
+      "Update Task data"
     ),
   setDraggedTask: (id) => set({ draggedTask: id }, false, "isDragged"),
   moveTask: (
@@ -155,8 +186,6 @@ const store = (set) => ({
         }
 
         newColumnIds.splice(destinationIndex, 0, updatedColumn) // Insert task at destination index
-
-        console.log(updatedColumn)
 
         store.columns = newColumnIds // Update tasks in the store
       }),
