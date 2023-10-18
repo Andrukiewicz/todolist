@@ -20,7 +20,7 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Markdown implementation ✔
 - Due date set / check / visualize
 - Mouse grab horizontal scroll
-- Fix task grabbing (shadcn modal on click is doing that)
+- Fix task grabbing (shadcn dialog is preventing that)
 
 ## Links to all my apps
 
