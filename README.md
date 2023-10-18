@@ -16,10 +16,11 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 
 - Text truncate ✔
 - Max text length ✔
-- Modal window with ability to add task description
+- Modal window with ability to add task description ✔
+- Markdown implementation ✔
 - Due date set / check / visualize
-- Markdown implementation
 - Mouse grab horizontal scroll
+- Fix task grabbing (shadcn modal on click is doing that)
 
 ## Links to all my apps
 
