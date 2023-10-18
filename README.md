@@ -11,6 +11,7 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Persisting tasks, columns, and collapsing column state in LocalStorage
 - Fully animated drag and drop inbetween tasks and columns
 - Fully rearrangable positions of tasks and columns
+- WYSIWYG editor for tasks
 
 ## Things to add / fix
 
@@ -18,9 +19,10 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Max text length ✔
 - Modal window with ability to add task description ✔
 - Markdown implementation ✔
+- Fix task grabbing (shadcn dialog is preventing that) ✔
 - Due date set / check / visualize
 - Mouse grab horizontal scroll
-- Fix task grabbing (shadcn dialog is preventing that)
+- Adjust WYSIWYG design (code markup for example needs background)
 
 ## Links to all my apps
 

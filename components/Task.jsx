@@ -4,9 +4,7 @@ import { Draggable } from "@hello-pangea/dnd"
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
-  DialogPortal,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -27,23 +25,25 @@ export default function Task({ id, index }) {
   return (
     <Draggable draggableId={task.id} index={index}>
       {(provided, snapshot) => (
-        <div
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-          ref={provided.innerRef}
-          className={`${
-            snapshot.isDragging
-              ? "bg-gray-200 dark:bg-gray-700 opacity-50"
-              : "bg-gray-100 dark:bg-gray-800"
-          } rounded-xl min-h-[2rem] text-left px-2 py-1 flex flex-col justify-between cursor-move mb-2`}
-        >
+        <div className='rounded-xl text-left cursor-move mb-2'>
           <Dialog>
             <ContextMenu>
               <ContextMenuTrigger>
-                <DialogTrigger>
-                  <h2 className='break-words overflow-hidden h-full whitespace-pre-wrap'>
-                    {task.title}
-                  </h2>
+                <DialogTrigger className='w-full'>
+                  <div
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                    ref={provided.innerRef}
+                    className={`${
+                      snapshot.isDragging
+                        ? "bg-gray-200 dark:bg-gray-700 opacity-50"
+                        : "bg-gray-100 dark:bg-gray-800"
+                    } rounded-xl text-left px-2 py-1 cursor-move`}
+                  >
+                    <h2 className='break-words overflow-hidden [text-wrap:balance] whitespace-pre-wrap'>
+                      {task.title}
+                    </h2>
+                  </div>
                 </DialogTrigger>
               </ContextMenuTrigger>
               <ContextMenuContent>
@@ -64,14 +64,12 @@ export default function Task({ id, index }) {
                   </div>
                 </DialogTitle>
               </DialogHeader>
-              <div>
-                <TaskEditor
-                  title={task.title}
-                  description={task.description}
-                  id={task.id}
-                  index={index}
-                />
-              </div>
+              <TaskEditor
+                title={task.title}
+                description={task.description}
+                id={task.id}
+                index={index}
+              />
             </DialogContent>
           </Dialog>
         </div>
