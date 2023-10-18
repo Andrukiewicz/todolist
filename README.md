@@ -23,6 +23,7 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Due date set / check / visualize
 - Mouse grab horizontal scroll
 - Adjust WYSIWYG design (code markup for example needs background)
+- Fix droppable area in column (currently gap between tasks while being grapped is too big)
 
 ## Links to all my apps
 
