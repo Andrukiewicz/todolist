@@ -215,7 +215,7 @@ export default function Column({ state, index }) {
                         snapshot.isDraggingOver
                           ? "bg-gray-300 dark:bg-gray-600"
                           : ""
-                      } max-h-96 transition-colors p-2 rounded-lg overflow-y-auto overflow-x-hidden`}
+                      } max-h-96 transition-colors p-1 rounded-lg overflow-y-auto overflow-x-hidden`}
                     >
                       {tasks.map((task, index) => (
                         <div key={task.id}>
