@@ -20,10 +20,10 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Modal window with ability to add task description ✔
 - Markdown implementation ✔
 - Fix task grabbing (shadcn dialog is preventing that) ✔
+- Fix droppable area in column (currently gap between tasks while being grabbed is too big) ✔
 - Due date set / check / visualize
 - Mouse grab horizontal scroll
 - Adjust WYSIWYG design (code markup for example needs background)
-- Fix droppable area in column (currently gap between tasks while being grapped is too big)
 
 ## Links to all my apps
 
