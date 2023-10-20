@@ -35,7 +35,7 @@ export default function Task({ id, index }) {
                   ref={provided.innerRef}
                   className={`${
                     snapshot.isDragging && "opacity-50"
-                  } bg-gray-100 dark:bg-gray-800 my-1 rounded-xl text-left px-2 py-1 cursor-move flex w-full`}
+                  } bg-gray-100 dark:bg-gray-800 my-1 rounded-lg text-left px-2 py-1 cursor-move flex w-full`}
                 >
                   <h2 className='break-words overflow-hidden [text-wrap:balance] whitespace-pre-wrap'>
                     {task.title}
