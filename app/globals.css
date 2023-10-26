@@ -106,9 +106,26 @@
   margin-top: 0.75em;
 }
 
+.tiptap {
+  overflow-y: auto;
+}
+
+.tiptap p {
+  @apply text-sm;
+}
+
 .tiptap ul,
 .tiptap ol {
   padding: 0 1rem;
+  color: white;
+}
+
+.tiptap ol {
+  list-style-type: decimal;
+}
+
+.tiptap ul {
+  list-style-type: disc;
 }
 
 .tiptap h1,
@@ -120,24 +137,28 @@
   line-height: 1.1;
 }
 
+.tiptap h1 {
+  @apply text-3xl;
+}
+.tiptap h2 {
+  @apply text-2xl;
+}
+.tiptap h3 {
+  @apply text-xl;
+}
+.tiptap h4 {
+  @apply text-lg;
+}
+
 .tiptap code {
-  background-color: rgba(97, 97, 97, 0.1);
-  color: #616161;
+  @apply text-gray-950 dark:text-gray-100 bg-gray-300 dark:bg-gray-800 w-full flex rounded-lg p-2 border border-gray-200 dark:border-gray-700;
 }
 
 .tiptap pre {
   background: #0d0d0d;
   color: #fff;
   font-family: "JetBrainsMono", monospace;
-  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-}
-
-.tiptap pre code {
-  color: inherit;
-  padding: 0;
-  background: none;
-  font-size: 0.8rem;
 }
 
 .tiptap img {

@@ -42,6 +42,7 @@ export default function TaskEditor({ id, title, description }) {
   function onSubmit(data) {
     updateTask(id, data.title, data.description)
   }
+
   return (
     <Form {...form}>
       <form
@@ -68,7 +69,11 @@ export default function TaskEditor({ id, title, description }) {
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <TipTap description={field.value} onChange={field.onChange} />
+                <TipTap
+                  description={field.value}
+                  onChange={field.onChange}
+                  withTypographyExtension={true}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -1,6 +1,7 @@
 import { useEditor, EditorContent } from "@tiptap/react"
 import StarterKit from "@tiptap/starter-kit"
 import Toolbar from "./Toolbar"
+import Heading from "@tiptap/extension-heading"
 
 export default function TipTap({ description, onChange }) {
   const editor = useEditor({
@@ -11,16 +12,15 @@ export default function TipTap({ description, onChange }) {
             class: "list-decimal pl-4",
           },
         },
-        heading: {
-          HTMLAttributes: {
-            class: "text-xl font-bold",
-            levels: [2],
-          },
-        },
         paragraph: {
           HTMLAttributes: {
             class: "text-sm",
           },
+        },
+      }),
+      Heading.configure({
+        HTMLAttributes: {
+          levels: [1, 2, 3, 4],
         },
       }),
     ],
@@ -38,7 +38,7 @@ export default function TipTap({ description, onChange }) {
   })
 
   return (
-    <div className='flex flex-col justify-stretch min-h-[10rem] max-h-[25rem]'>
+    <div className='flex flex-col justify-stretch min-h-[10rem] max-h-fit'>
       <Toolbar editor={editor} />
       <EditorContent editor={editor} />
     </div>
