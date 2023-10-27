@@ -2,7 +2,7 @@
 
 import Column from "../components/Column"
 import { v4 as uuidv4 } from "uuid"
-import { useStore } from "@store"
+import { useStore } from "@/store"
 import { DragDropContext, Droppable } from "@hello-pangea/dnd"
 
 export default function Home() {

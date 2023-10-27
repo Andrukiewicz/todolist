@@ -5,15 +5,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@components/ui/form"
-import { Input } from "@components/ui/input"
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Button } from "./ui/button"
+import { DialogClose } from "@/components/ui/dialog"
+
+import { useStore } from "@/store"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "./ui/button"
 import TipTap from "./TipTap"
-import { useStore } from "@store"
-import { DialogClose } from "./ui/dialog"
 
 export default function TaskEditor({ id, title, description }) {
   const formSchema = z.object({

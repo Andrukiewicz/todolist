@@ -1,5 +1,5 @@
 "use client"
-import { useStore } from "@store"
+import { useStore } from "@/store"
 import { Draggable } from "@hello-pangea/dnd"
 import {
   Dialog,
@@ -28,14 +28,14 @@ export default function Task({ id, index }) {
         <Dialog>
           <ContextMenu>
             <ContextMenuTrigger>
-              <DialogTrigger className='h-full flex w-full'>
+              <DialogTrigger className='h-full flex w-full cursor-grab'>
                 <div
                   {...provided.draggableProps}
                   {...provided.dragHandleProps}
                   ref={provided.innerRef}
                   className={`${
                     snapshot.isDragging && "opacity-50"
-                  } bg-gray-100 dark:bg-gray-800 my-1 rounded-lg text-left px-2 py-1 cursor-move flex w-full`}
+                  } bg-gray-100 dark:bg-gray-800 rounded-lg text-left px-2 py-1 flex w-full`}
                 >
                   <h2 className='break-words overflow-hidden [text-wrap:balance] whitespace-pre-wrap'>
                     {task.title}

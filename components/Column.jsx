@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 
-import { useStore } from "@store"
+import { useStore } from "@/store"
 import Task from "./Task"
 import { ArrowRightIcon, TrashIcon } from "@heroicons/react/24/solid"
 import { Droppable, Draggable } from "@hello-pangea/dnd"
@@ -143,8 +143,6 @@ export default function Column({ state, index }) {
                 } flex items-center justify-between rounded-t-lg p-2 w-full font-medium text-center gap-4`}
               >
                 <button
-                  transition={{ ease: "easeOut", duration: 0.1 }}
-                  animate={{ rotate: state.collapsed ? 90 : 0 }}
                   onClick={() => handleToggleCollapse(state.id)}
                   className={`${
                     state.collapsed ? "rotate-90" : "rotate-0"
@@ -215,7 +213,7 @@ export default function Column({ state, index }) {
                         snapshot.isDraggingOver
                           ? "bg-gray-300 dark:bg-gray-600"
                           : ""
-                      } max-h-96 transition-colors p-1 rounded-lg overflow-y-auto overflow-x-hidden`}
+                      } max-h-96 transition-colors p-1 mb-2 space-y-2 rounded-lg overflow-y-auto overflow-x-hidden`}
                     >
                       {tasks.map((task, index) => (
                         <div key={task.id}>
