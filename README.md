@@ -27,4 +27,5 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 
 ## Links to all my apps
 
-- [Trollo](#) - Trello like kanban app
+- [Trollo](https://trollo-self.vercel.app/) - Trello like kanban app
+- [CoffeePanda](#) - Cafe website design
