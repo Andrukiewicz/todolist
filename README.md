@@ -25,7 +25,6 @@ Hosted demo: [Trollo](https://trollo-self.vercel.app/)
 - Mouse grab horizontal scroll
 - Adjust WYSIWYG design (code markup for example needs background)
 
-## Links to all my apps
+## Links to my repos
 
-- [Trollo](https://trollo-self.vercel.app/) - Trello like kanban app
-- [CoffeePanda](#) - Cafe website design
+- [AndrukiewiczDev Github](https://github.com/Andrukiewicz) < here!
